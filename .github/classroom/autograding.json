@@ -1,0 +1,24 @@
+{
+  "tests": [
+    {
+      "name": "Pascal",
+      "setup": "",
+      "run": "./gradlew clean test --tests MyTests.testPascal",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    },
+    {
+      "name": "Chomp",
+      "setup": "",
+      "run": "./gradlew clean test --tests MyTests.testChomp",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 1
+    }
+  ]
+}
