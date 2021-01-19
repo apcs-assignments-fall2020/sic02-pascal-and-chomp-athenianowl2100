@@ -14,8 +14,27 @@ public class Chomp
     // or given food was already eaten)
     public static boolean eat(char[][] board, int row, int col)
     {        
-        // YOUR CODE HERE
-        return false;
+        // Return false if they tried to eat a block that is out of bounds
+        if (row >= board.length || col >= board[0].length) {
+            System.out.println("Try again! Out of bounds!");
+            return false;
+        }
+
+        // Return false if they tried to eat a block that was already eaten
+        if (board[row][col] != '*') {
+            System.out.println("Try again! That was already eaten!");
+            return false;
+        }
+        
+        // Eat everything
+        for (int i = row; i < board.length; i++)
+        {
+            for (int j = col; j < board[0].length; j++)
+            {
+                board[i][j] = ' ';
+            }
+        }
+        return true;
     }
     
     public static void printBoard(char[][] board)
